@@ -1,6 +1,5 @@
 import React from "react"
 import "../styles/tailwind.css"
-import { InformationCircleIcon } from '@heroicons/react/outline'
 
 export default function IntegerCard(props) {
     return (
@@ -10,7 +9,9 @@ export default function IntegerCard(props) {
                     {props.label}
                 </div>
                 <div className="-mt-2 -mr-2 p-2 hover:text-blue-400">
-                    <InformationCircleIcon className="w-4 h-4 "></InformationCircleIcon>
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
                 </div>
             </div>
 

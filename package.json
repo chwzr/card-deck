@@ -22,9 +22,7 @@
     "url": "https://github.com/chwzr/card-deck/issues"
   },
   "homepage": "https://github.com/chwzr/card-deck#readme",
-  "dependencies": {
-    "@heroicons/react": "^1.0.6"
-  },
+  "dependencies": {},
   "devDependencies": {
     "rollup-plugin-postcss": "^4.0.2",
     "rollup": "^2.78.0",
