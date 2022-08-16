@@ -1,6 +1,6 @@
 {
-  "name": "@chwzr/card-deck",
-  "version": "1.0.0",
+  "name": "@cavorit/card-deck",
+  "version": "0.0.1",
   "description": "Apergy Data Cards",
   "main": "output.js",
   "scripts": {
@@ -25,11 +25,11 @@
   "dependencies": {
     "@heroicons/react": "^1.0.6",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "rollup": "^2.78.0",
-    "rollup-plugin-postcss": "^4.0.2"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup": "^2.78.0",
     "@babel/core": "^7.18.10",
     "@babel/preset-env": "^7.18.10",
     "@babel/preset-react": "^7.18.6",
