@@ -1,4 +1,4 @@
-import React from 'https://unpkg.com/es-react@18.2.0';
+import React from 'https://unpkg.com/es-react@16.13.1';
 
 function styleInject(css, ref) {
   if ( ref === void 0 ) ref = {};
