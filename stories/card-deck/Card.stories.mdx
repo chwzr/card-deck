@@ -1,0 +1,27 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import IntegerCard from "../../components/IntegerCard";
+
+<Meta title="Apergy/Card" component={IntegerCard} />
+
+export const Template = (args) => <IntegerCard {...args} />;
+
+# Apergy Card
+
+Define Data Cards in Notebook Code Cells
+
+## Example
+
+```python
+apergy.card( type="IntegerCard", label="T01", value=42 )
+```
+
+will output:
+
+  <Story 
+    name="Primary"
+    args={{ 
+      value: 42,
+      label: 'T01'
+    }}>
+    {Template.bind({})}
+   </Story>
