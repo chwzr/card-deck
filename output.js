@@ -1,11 +1,5 @@
 import React from 'https://unpkg.com/es-react@16.13.1';
-import * as j from 'https://unpkg.com/@jupyterlab/services@6.4.5/dist/dist/index.js';
-
-SessionAPI = j.SessionAPI
-ServerConnection = j.ServerConnection
-KernelManager = j.KernelManager
-SessionManager = j.SessionManager
-
+import { KernelManager, SessionAPI, SessionManager, ServerConnection }from 'https://unpkg.com/@cavorit/jupyterlabservices@7.0.0-esmalpha.13/dist/dist/index.js';
 
 function styleInject(css, ref) {
   if ( ref === void 0 ) ref = {};
