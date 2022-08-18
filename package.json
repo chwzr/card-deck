@@ -1,6 +1,6 @@
 {
   "name": "@cavorit/card-deck",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Apergy Data Cards",
   "main": "output.js",
   "scripts": {
