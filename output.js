@@ -1,7 +1,10 @@
 import React from 'https://unpkg.com/es-react@16.13.1';
 import * as j from 'https://unpkg.com/@jupyterlab/services@6.4.5/dist/dist/index.js';
 
-({ SessionAPI, ServerConnection, KernelManager, SessionManager } = j)
+SessionAPI = j.SessionAPI
+ServerConnection = j.ServerConnection
+KernelManager = j.KernelManager
+SessionManager = j.SessionManager
 
 
 function styleInject(css, ref) {
