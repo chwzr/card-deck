@@ -1,6 +1,6 @@
-import React from 'https://unpkg.com/es-react@16.13.1';
-import { KernelManager, SessionAPI, SessionManager, ServerConnection } from 'https://unpkg.com/@cavorit/jupyterlabservices@7.0.0-esmalpha.13/dist/dist/index.js';
-
+import React from 'react';
+import Link from 'next/link';
+import { SessionAPI, ServerConnection, KernelManager, SessionManager } from '@jupyterlab/services';
 
 function styleInject(css, ref) {
   if ( ref === void 0 ) ref = {};
@@ -39,7 +39,9 @@ function IntegerCard(props) {
     className: "w-full flex justify-between"
   }, /*#__PURE__*/React.createElement("div", {
     className: "font-mono text-xs"
-  }, props.label), /*#__PURE__*/React.createElement("div", {
+  }, props.label), /*#__PURE__*/React.createElement(Link, {
+    href: "/notebook/" + props.notebookName
+  }, /*#__PURE__*/React.createElement("div", {
     className: "-mt-2 -mr-2 p-2 hover:text-blue-400"
   }, /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -52,7 +54,7 @@ function IntegerCard(props) {
     strokeLinecap: "round",
     strokeLinejoin: "round",
     d: "M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-  })))), /*#__PURE__*/React.createElement("div", {
+  }))))), /*#__PURE__*/React.createElement("div", {
     className: "font-mono text-xl -mt-4 flex w-full h-full items-center justify-center"
   }, props.value));
 }
@@ -635,7 +637,9 @@ function Slider(_ref) {
     className: "w-full flex justify-between"
   }, /*#__PURE__*/React.createElement("div", {
     className: "font-mono text-xs"
-  }, label), /*#__PURE__*/React.createElement("div", {
+  }, label), /*#__PURE__*/React.createElement(Link, {
+    href: "/notebook/" + props.notebookName
+  }, /*#__PURE__*/React.createElement("div", {
     className: "-mt-2 -mr-2 p-2 hover:text-blue-400"
   }, /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -648,7 +652,7 @@ function Slider(_ref) {
     strokeLinecap: "round",
     strokeLinejoin: "round",
     d: "M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-  })))), /*#__PURE__*/React.createElement("div", {
+  }))))), /*#__PURE__*/React.createElement("div", {
     className: "font-mono text-xl -mt-4 flex flex-col w-full h-full items-center justify-center"
   }, /*#__PURE__*/React.createElement("div", {
     className: "text-xs mb-2"
