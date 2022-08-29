@@ -1,13 +1,6 @@
-'use strict';
+import React from 'https://unpkg.com/es-react@16.13.1';
+import { KernelManager, SessionAPI, SessionManager, ServerConnection } from 'https://unpkg.com/@cavorit/jupyterlabservices@7.0.0-esmalpha.13/dist/dist/index.js';
 
-Object.defineProperty(exports, '__esModule', { value: true });
-
-var React = require('react');
-var services = require('@jupyterlab/services');
-
-function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
-
-var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
 
 function styleInject(css, ref) {
   if ( ref === void 0 ) ref = {};
@@ -40,26 +33,26 @@ var css_248z = "/*! tailwindcss v3.1.8 | MIT License | https://tailwindcss.com*/
 styleInject(css_248z,{"insertAt":"top"});
 
 function IntegerCard(props) {
-  return /*#__PURE__*/React__default["default"].createElement("div", {
+  return /*#__PURE__*/React.createElement("div", {
     className: "bg-slate-700 w-48 h-20 p-2 rounded-lg shadow-lg text-white flex flex-col"
-  }, /*#__PURE__*/React__default["default"].createElement("div", {
+  }, /*#__PURE__*/React.createElement("div", {
     className: "w-full flex justify-between"
-  }, /*#__PURE__*/React__default["default"].createElement("div", {
+  }, /*#__PURE__*/React.createElement("div", {
     className: "font-mono text-xs"
-  }, props.label), /*#__PURE__*/React__default["default"].createElement("div", {
+  }, props.label), /*#__PURE__*/React.createElement("div", {
     className: "-mt-2 -mr-2 p-2 hover:text-blue-400"
-  }, /*#__PURE__*/React__default["default"].createElement("svg", {
+  }, /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
     className: "w-4 h-4",
     fill: "none",
     viewBox: "0 0 24 24",
     stroke: "currentColor",
     strokeWidth: 2
-  }, /*#__PURE__*/React__default["default"].createElement("path", {
+  }, /*#__PURE__*/React.createElement("path", {
     strokeLinecap: "round",
     strokeLinejoin: "round",
     d: "M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-  })))), /*#__PURE__*/React__default["default"].createElement("div", {
+  })))), /*#__PURE__*/React.createElement("div", {
     className: "font-mono text-xl -mt-4 flex w-full h-full items-center justify-center"
   }, props.value));
 }
@@ -510,13 +503,13 @@ function Slider(_ref) {
       inputKey = _ref.inputKey,
       notebookName = _ref.notebookName;
 
-  var _React$useState = React__default["default"].useState(initialValue),
+  var _React$useState = React.useState(initialValue),
       _React$useState2 = _slicedToArray(_React$useState, 2),
       value = _React$useState2[0],
       setValue = _React$useState2[1];
 
-  var comm = React__default["default"].useRef();
-  React__default["default"].useEffect(function () {
+  var comm = React.useRef();
+  React.useEffect(function () {
     var init = /*#__PURE__*/function () {
       var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
         var serverSettings, kernelManager, sessionManager, sessionModels, session, sessionModel;
@@ -524,21 +517,21 @@ function Slider(_ref) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                serverSettings = services.ServerConnection.makeSettings({
+                serverSettings = ServerConnection.makeSettings({
                   baseUrl: "https://jupyter.cavorit.de",
                   appUrl: "https://jupyter.cavorit.de",
                   token: '',
                   wsUrl: "wss://jupyter.cavorit.de"
                 });
-                kernelManager = new services.KernelManager({
+                kernelManager = new KernelManager({
                   serverSettings: serverSettings
                 });
-                sessionManager = new services.SessionManager({
+                sessionManager = new SessionManager({
                   kernelManager: kernelManager,
                   serverSettings: serverSettings
                 });
                 _context.next = 5;
-                return services.SessionAPI.listRunning(serverSettings);
+                return SessionAPI.listRunning(serverSettings);
 
               case 5:
                 sessionModels = _context.sent;
@@ -557,7 +550,7 @@ function Slider(_ref) {
 
               case 11:
                 _context.next = 13;
-                return services.SessionAPI.startSession({
+                return SessionAPI.startSession({
                   kernel: {
                     name: "python3"
                   },
@@ -636,30 +629,30 @@ function Slider(_ref) {
     };
   }();
 
-  return /*#__PURE__*/React__default["default"].createElement("div", {
+  return /*#__PURE__*/React.createElement("div", {
     className: "bg-slate-700 w-48 h-20 p-2 rounded-lg shadow-lg text-white flex flex-col"
-  }, /*#__PURE__*/React__default["default"].createElement("div", {
+  }, /*#__PURE__*/React.createElement("div", {
     className: "w-full flex justify-between"
-  }, /*#__PURE__*/React__default["default"].createElement("div", {
+  }, /*#__PURE__*/React.createElement("div", {
     className: "font-mono text-xs"
-  }, label), /*#__PURE__*/React__default["default"].createElement("div", {
+  }, label), /*#__PURE__*/React.createElement("div", {
     className: "-mt-2 -mr-2 p-2 hover:text-blue-400"
-  }, /*#__PURE__*/React__default["default"].createElement("svg", {
+  }, /*#__PURE__*/React.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
     className: "w-4 h-4",
     fill: "none",
     viewBox: "0 0 24 24",
     stroke: "currentColor",
     strokeWidth: 2
-  }, /*#__PURE__*/React__default["default"].createElement("path", {
+  }, /*#__PURE__*/React.createElement("path", {
     strokeLinecap: "round",
     strokeLinejoin: "round",
     d: "M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-  })))), /*#__PURE__*/React__default["default"].createElement("div", {
+  })))), /*#__PURE__*/React.createElement("div", {
     className: "font-mono text-xl -mt-4 flex flex-col w-full h-full items-center justify-center"
-  }, /*#__PURE__*/React__default["default"].createElement("div", {
+  }, /*#__PURE__*/React.createElement("div", {
     className: "text-xs mb-2"
-  }, value), /*#__PURE__*/React__default["default"].createElement("input", {
+  }, value), /*#__PURE__*/React.createElement("input", {
     id: "default-range",
     type: "range",
     onChange: updateValue,
@@ -668,5 +661,4 @@ function Slider(_ref) {
   })));
 }
 
-exports.IntegerCard = IntegerCard;
-exports.Slider = Slider;
+export { IntegerCard, Slider };
